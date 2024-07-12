@@ -14,7 +14,7 @@
                     <?php foreach($notes as $note): ?>
                         <li class="text-blue-800 underline list-disc">
                             <a href="/note?id=<?= $note["id"] ?>">
-                                <?= $note["description"] ?>
+                                <?= htmlspecialchars($note["description"]) ?>
                             </a>
                         </li>
                     <?php endforeach; ?>

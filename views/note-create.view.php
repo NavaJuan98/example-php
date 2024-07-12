@@ -14,6 +14,12 @@
                     <label for="description">Description</label>
                     <div>
                         <textarea name="description" id="description"></textarea>
+
+                        <?php if (isset($errors["description"])) : ?>
+                        <p class="text-red-500 text-sm ">
+                            <?= $errors["description"] ?? ""; ?>
+                        </p>
+                        <?php endif; ?>
                     </div>
                     <p>
                         <button class="block" type="submit">Create</button>

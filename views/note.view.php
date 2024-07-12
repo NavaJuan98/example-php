@@ -12,7 +12,7 @@
 
                 <ul class="my-4">
                     <li class="text-slate-800 list-disc">
-                            <?= $note["description"] ?>
+                            <?= htmlspecialchars($note["description"]) ?>
                     </li>
                 </ul>
                 <a href="/notes" class="underline text-sky-800">Go Back Notes</a>
