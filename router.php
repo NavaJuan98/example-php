@@ -1,6 +1,6 @@
 <?php 
 
-$routes = require("routes.php");
+$routes = require "routes.php";
 
 
 function abort( $code = 404 ) {
