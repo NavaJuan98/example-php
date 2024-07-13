@@ -1,5 +1,7 @@
 <?php 
 
+use Core\Response;
+
 $routes = require "routes.php";
 
 
@@ -21,7 +23,7 @@ function abort( $code = 404 ) {
 $uri = parse_url($_SERVER["REQUEST_URI"])["path"];
 
 if ($routes[$uri] == true) {
-    require $routes[$uri];
+    require base_path($routes[$uri]);
 } else {
     abort(Response::NOT_FOUND);
 }
