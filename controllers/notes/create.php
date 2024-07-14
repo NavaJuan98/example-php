@@ -25,11 +25,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 "description" => $description,
                 "user_id" => $currentUserId
             ]);
+
+            header("Location: /notes");
         }
     }
 }
 
 view("notes/create.view.php", [
-    "heading"=> "Create",
+    "heading" => "Create",
     "errors" => $errors,
 ]);

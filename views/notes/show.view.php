@@ -15,6 +15,11 @@
                             <?= htmlspecialchars($note["description"]) ?>
                     </li>
                 </ul>
+                <form method="post">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="hidden" value="<?= $note['id'] ?>" name="id">
+                    <button class="text-m mb-3 text-red-500 ">Delete</button>
+                </form>
                 <a href="/notes" class="underline text-sky-800">Go Back Notes</a>
              </div>
          </main>

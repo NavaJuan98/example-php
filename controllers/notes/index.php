@@ -12,6 +12,6 @@ $notes = $db->query("SELECT * FROM notes WHERE user_id = :user_id", [
 ])->get();
 
 view("notes/index.view.php", [
-    "heading"=> "Notes",
+    "heading" => "Notes",
     "notes" => $notes,
 ]);
